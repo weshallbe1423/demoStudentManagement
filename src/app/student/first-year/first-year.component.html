@@ -1,0 +1,67 @@
+<div class="container first-container">
+  <button (click)="onClick()"> back</button>
+  <h2>Profile</h2>
+  
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      
+      
+        <img [src]="imgURL" class="img-responsive" height="200" width="200" *ngIf="imgURL">
+        <span style="color:red;" *ngIf="message">{{message}}</span>
+        <input #file type="file" accept='image/*' (change)="preview(file.files)" />
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary">Upload</button>
+    </div>
+</form>
+<form [formGroup]='studentForm' (ngSubmit)="saveStudent()">
+
+    <div class="form-group">
+      <label for="rollnumber">Roll Number:</label>
+      <input  type="number" formControlName='rollnumber' [ngClass]="{ 'is-invalid': submitted && f.rollnumber.errors }" class="form-control" id="rollnumber" required>
+      <div *ngIf="submitted && f.rollnumber.errors" class="invalid-feedback">
+        <div *ngIf="f.rollnumber.errors.required">Roll Number is required</div></div>
+    </div>
+    <div class="form-group">
+        <label for="firstName">First Name:</label>
+        <input type="text" formControlName='firstName'[ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" class="form-control" id="firstName" required>
+        <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+          <div *ngIf="f.firstName.errors.required">First Name is required</div>
+      </div>
+      </div>
+      <div class="form-group">
+        <label for="middleName">Middle Name:</label>
+        <input type="text" formControlName='middleName' [ngClass]="{'is-invalid':submitted && f.middleName.errors}" class="form-control" id="middleName">
+        <div *ngIf="submitted && f.middleName.errors" class="invalid-feedback">
+          <div *ngIf="f.middleName.errors.required">Middle Name is required</div>
+      </div></div>
+      <div class="form-group">
+        <label for="lastName">Last Name:</label>
+        <input type="text" formControlName='lastName' [ngClass]="{'is-invalid':submitted && f.lastName.errors}" class="form-control" id="lastName" required>
+        <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+          <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+      </div></div>
+      <div class="form-group">
+        <label for="className">Class Name:</label>
+        <input type="text" formControlName='className'  [ngClass]="{'is-invalid':submitted && f.className.errors}" class="form-control" id="className" required>
+        <div *ngIf="submitted && f.className.errors" class="invalid-feedback">
+          <div *ngIf="f.className.errors.required">Class Name is required</div>
+      </div></div>
+      <div class="form-group">
+        <label for="classYear">Class Year:</label>
+        <input type="number" formControlName='classYear' [ngClass]="{'is-invalid':submitted && f.classYear.errors}" class="form-control" id="classYear" required>
+        <div *ngIf="submitted && f.classYear.errors" class="invalid-feedback">
+          <div *ngIf="f.classYear.errors.required">Class Year is required</div>
+      </div>
+    </div>
+      <div class="form-group">
+        <label for="admissionYear">Addmission Year:</label>
+        <input type="number" formControlName='admissionYear' [ngClass]="{'is-invalid':submitted && f.admissionYear.errors}" class="form-control" id="admissionYear" required>
+        <div *ngIf="submitted && f.admissionYear.errors" class="invalid-feedback">
+          <div *ngIf="f.admissionYear.errors.required">Addmission Year is required</div>
+      </div>
+      </div>
+   
+    <button type="submit"  class="btn btn-default">Submit</button>
+  </form>
+  </div>

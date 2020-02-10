@@ -1,0 +1,31 @@
+
+<div class="table-responsive">          
+    <table class="table">
+      <thead>
+        <tr class="w-50">
+          <th>Roll Number</th>
+          <th>Firstname</th>
+          <th>MiddleName</th>
+
+          <th>Lastname</th>
+          <th>Class Name</th>
+          <th>Class Year</th>
+          <th>Admission Year</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor='let student of studentData' [attr.rollNumber]="student.rollNumber" class="w-25">
+          <td>{{student.rollNumber}}</td>
+          <td>{{student.firstName}}</td>
+          <td>{{student.middleName}}</td>
+          <td>{{student.lastName}}</td>
+          <td>{{student.className}}</td>
+          <td>{{student.classYear}}</td>
+          <td>{{student.admissionYear}}</td>
+          <td><button class="btn btn-success" (click)="deleteStudent(student.rollNumber)"> Delete</button></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  

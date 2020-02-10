@@ -1,0 +1,58 @@
+
+
+<!-- Toolbar -->
+  
+<nav class="navbar navbar">
+    <div class="container-fluid">
+     
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Student
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a routerLink='/student/first'>First Year</a></li>
+            <li><a routerLink='/student/second'>Second Year</a></li>
+            <li> <a routerLink='/student/third'>Third Year</a></li>
+            <li> <a routerLink='/student/last'>Last Year</a></li>
+            <li> <a routerLink='/student/student-list'>Student List</a></li>
+            
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">College
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+           
+            <li> <a routerLink='/college/administration'>Administration</a></li>
+            <li><a routerLink='/college/labs'>Labs</a></li>
+            <li> <a routerLink='/college/library'>Library</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Department
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li> <a routerLink='/department/it'>INFORMATION TECHNOLOGY</a></li>
+            <li><a routerLink='/department/computer'>COMPUTER</a></li>
+            <li><a routerLink='/department/civil'>CIVIL</a></li>
+            <li><a routerLink='/department/mechanical'>MECHANICAL</a></li>
+            <li><a routerLink='/department/electrical'>ELECTRICAL</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Guest House
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li> <a routerLink='/guest-house/parents'>Parents</a></li>
+            <li> <a routerLink='/guest-house/vip'>Vip Persons</a></li>
+          </ul>
+        </li>
+     
+  
+      </ul>
+    </div>
+  </nav>
+  
+  
+  <router-outlet ></router-outlet>
+  
